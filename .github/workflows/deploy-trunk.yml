@@ -13,7 +13,7 @@ jobs:
 
     - name: Deploy to server
       if: success()
-      uses: easingthemes/ssh-deploy@v5
+      uses: easingthemes/ssh-deploy@v5.0.0
       with:
         # Remember this needs to be in PEM format, so make sure you aren't
         # using one of your old keys, Jeremy.

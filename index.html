@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<title>Foggy Garden - A curated directory of websites</title>
+	<style>
+		:root {
+			--sans-serif: sans-serif;
+
+			--font-size-small: 0.8rem;
+			--font-size-base: 1rem;
+			--font-size-default: 1.125rem;
+			--font-size-content-heading: 1.5rem;
+
+			--color-background: #4ac3ff;
+			--color-content-background: #fefefe;
+			--color-foreground: #333;
+
+			--spacing-default: 2rem;
+
+			--gutter-edge: 1rem;
+		}
+
+		@media screen and (min-width: 500px) {
+			body {
+				--gutter-edge: 2rem;
+			}
+		}
+
+		@media screen and (min-width: 1120px) {
+			body {
+				--gutter-edge: 6rem;
+			}
+		}
+
+		body {
+			background: var(--color-background);
+			color: var(--color-foreground);
+			font-family: var(--sans-serif);
+			font-size: var(--font-size-default);
+			line-height: 1.55;
+		}
+
+		header {
+			margin-top: var(--gutter-edge);
+		}
+
+		header,
+		footer,
+		main {
+			background: var(--color-content-background);
+			margin-inline: var(--gutter-edge);
+			padding: var(--spacing-default);
+		}
+
+		footer {
+			font-size: var(--font-size-base);
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<h1>Foggy Garden</h1>
+	</header>
+	<main>
+		<p>I don't know what to write here yet. But I'll think of something!</p>
+
+		<h2>Websites</h2>
+
+		<h3>My websites</h3>
+		<ul>
+			<li><a href="https://jeremyfelt.com">jeremyfelt.com</a> is my website.</li>
+			<li><a href="https://fishtacos.blog">fishtacos.blog</a> is a group blog for people who enjoy fish tacos.
+			</li>
+		</ul>
+
+		<h3>Tools</h3>
+
+		<ul>
+			<li><a href="https://www.freshrss.org/">freshrss.org</a> is the self-hosted feed reader I use.</li>
+		</ul>
+
+		<h3>IndieWeb</h3>
+		<ul>
+			<li><a href="https://indieblog.page/">indieblog.page</a>, discover the IndieWeb one page at a time.</li>
+			<li><a href="https://ooh.directory">ooh.directory</a>, a collection of blogs about every topic.</li>
+		</ul>
+
+		<h3>Other</h3>
+
+		<ul>
+			<li><a href="https://plaintextsports.com/">plaintextsports.com</a>, a plain text scoreboard for various
+				sports.</li>
+		</ul>
+	</main>
+	<footer>
+		<p><a href="https://jeremyfelt.com">Jeremy</a> is responsible for <a href="https://foggy.garden">this
+				website</a>, which is maintained at <a
+				href="https://github.com/jeremyfelt/foggy-garden">jeremyfelt/foggy-garden</a>.
+			You are welcome to suggest links or fixes.</p>
+	</footer>
+</body>
+
+</html>

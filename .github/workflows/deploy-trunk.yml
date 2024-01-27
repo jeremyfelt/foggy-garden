@@ -1,0 +1,26 @@
+name: Deploy the foggy garden
+
+on:
+  push:
+    branches: [ trunk ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Deploy to server
+      if: success()
+      uses: easingthemes/ssh-deploy@v2.2.11
+      with:
+        # Remember this needs to be in PEM format, so make sure you aren't
+        # using one of your old keys, Jeremy.
+        # If you need a new key, use: ssh-keygen -m PEM -t rsa -b 4096
+        SSH_PRIVATE_KEY: ${{ secrets.FOGGY_SSH_KEY }}
+        ARGS: "-rltgoDzvO --exclude-from=.deploy_ignore --delete"
+        SOURCE: "./"
+        REMOTE_HOST: ${{ secrets.GARDEN_DEPLOY_HOST }}
+        REMOTE_USER: ${{ secrets.GARDEN_DEPLOY_USER }}
+        TARGET: ${{ secrets.GARDEN_DEPLOY_PATH }}
